@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking parking places </title>
+</head>
+<body>
+    <a class="p-2 text-dark" href="{% url 'login' %}">Log out</a>
+    <a class="p-2 text-dark" href="{% url 'park_list' %}">Go back</a>
+    <h1>List of the parking places to choose:</h1>
+    {% for elements in listHelper%}
+        <div class="alert alert-warning mt-2" align="center">
+            <h4>{{ elements.Number }}</h4>
+            <p>{{ elements.Status }}</p>
+            <p>Booking start time: {{ elements.TimeStart }}</p>
+            <p>Booking end time: {{ elements.TimeEnd }}</p>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.TimeStart }}
+                {{ form.TimeEnd }}
+                <button type="submit" class = "btn btn-success" href="{% url 'park_list' %}"> Save changes</button>
+                <span>{{ error }}</span></form>
+    {% endfor %}
+        </div>
+</body>
+</html>

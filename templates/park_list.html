@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <a class="p-2 text-dark" href="{% url 'login' %}">Log out</a>
+
+    <h4>List of the parking places to choose:</h4>
+    {% for elements in listHelper%}
+        <div class="alert alert-warning mt-2">
+            <h4>{{ elements.Number }}</h4>
+            <p>{{ elements.Status }}</p>
+            <p>Booking start time: {{ elements.TimeStart }}</p>
+            <p>Booking end time: {{ elements.TimeEnd }}</p>
+
+            </form>
+    {% endfor %}
+            <a class="p-2 text-dark" href="{% url 'worker' %}">Reserve a parking space</a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Managing of parking places</title>
+</head>
+<body>
+    <a class="p-2 text-dark" href="{% url 'login' %}">Log out</a>
+    <a class="p-2 text-dark" href="{% url 'park_list' %}">Go to parking list</a>
+
+    <h4>List of the parking places to delete:</h4>
+    {% for elements in listHelper%}
+        <div class="alert alert-warning mt-2" align="center">
+            <h4>{{ elements.Number }}</h4>
+            <p>{{ elements.Status }}</p>
+            <p>Booking start time: {{ elements.TimeStart }}</p>
+            <p>Booking end time: {{ elements.TimeEnd }}</p>
+    {% endfor %}
+        </div>
+    <a class="p-2 text-dark" href="{% url 'manager' %}">Delete all Parking places</a>
+</body>
+</html>

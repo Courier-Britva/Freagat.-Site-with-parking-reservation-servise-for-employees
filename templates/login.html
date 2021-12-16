@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+      <style>
+   p {
+    margin-top: 1em;
+    margin-bottom: 1em; /
+   }
+
+  </style>
+</head>
+<body>
+    <center> Parking for Fregat</center>
+    <center>This site was made by Artem Tarasov(GitHub link: https://github.com/Courier-Britva)</center>
+    <p></p>
+
+    <div class="Login_input" align="center">
+              <label for="Password" class="form-label"></label>
+              <input type="text" class="form-control" id="Login" placeholder="Login" value="" required="">
+            </div>
+    <p></p>
+<div class="Password_input" align="center">
+              <label for="Password" class="form-label"></label>
+              <input type="text" class="form-control" id="Password" placeholder="Password" value="" required="">
+            </div>
+<div align="center">
+        <p></p>
+
+<a class="p-2 text-dark" href="{% url 'park_list' %}">Im a worker!</a><br>
+<a class="p-2 text-dark" href="{% url 'manager' %}">Im a manager!</a>
+</div>
+</body>
+</html>
