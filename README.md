@@ -2,10 +2,22 @@
 I used this site as my pet project
 
 # Concept:
-Company X has created a website where employees can choose a parking space and a convenient time for them to use it. Unfortunately, the employees of department Y are very inattentive, so the correctness of the entered data is monitored by managers, who can delete and edit the time that the employees indicated.
-I wrote this site using Python Django to test my skills with the framework.
+
+
+![alt text](Screenshots/login.PNG)
+Company X has created a website where employees can choose a parking space and a convenient time for them to use it. 
+
+
+![alt text](Screenshots/park_list.PNG)
+
+Unfortunately, the employees of department Y are very inattentive, so the correctness of the entered data is monitored by managers, who can delete and edit the time that the employees indicated.
+
+
+
+![alt text](Screenshots/manager_change_parking_list.PNG)
 
 # Most of the logic of the site is written in the "Second Screen" web application
+I wrote this site using Python Django to test my skills with the framework.
  
 By design there are two types of users on the site: managers and employees, with different options for the use of parking spaces.
 
