@@ -15,7 +15,7 @@ def park_list(request):
             return redirect('park_list')
         else:
             error = 'form is not valid!'
-            return redirect('park_list')
+            return redirect('login')
     form = ParkingListForm()
     context = {
         'form': form,
