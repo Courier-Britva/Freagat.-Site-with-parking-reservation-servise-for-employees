@@ -8,7 +8,6 @@ def login(request):
 
 
 def park_list(request):
-    error = ''
     if request.method == 'POST':
         form = ParkingListForm(request.POST)
         if form.is_valid():
